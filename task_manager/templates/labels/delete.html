@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container wrapper flex-grow-1">
+    <h1 class="my-4">
+      Удаление метки
+    </h1>
+    <p>Вы уверены, что хотите удалить 3333?</p>
+    <form method="post">
+      <input type="hidden" name="csrfmiddlewaretoken" value="DElnTqvULOavxbmtSdM9c0GddD3ZPPD0JSQ6f2F0GPcHnHhgBAsmgnXwFpxWnrEG">
+      <input class="btn btn-danger" type="submit" value="Да, удалить">
+    </form>
+  </div>
+{% endblock %}

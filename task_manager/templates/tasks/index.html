@@ -1,0 +1,1077 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container wrapper flex-grow-1">
+      
+
+
+  <h1 class="my-4">
+    
+Задачи
+
+  </h1>
+  
+<a class="nav-link" href="/tasks/create/">Создать задачу</a>
+
+
+
+
+<div class="card mb-3">
+<div class="card-body bg-light">
+<form class="form-inline center" method="get">
+  <div class="form-group"><label for="id_status">Статус</label><div class="ml-2 mr-3"><select name="status" class="form-control" title="" id="id_status">
+<option value="" selected="">---------</option>
+
+<option value="1">234234232</option>
+
+<option value="4">jjj</option>
+
+<option value="5">Мутим дела</option>
+
+<option value="8">esses;;</option>
+
+<option value="15">в работе</option>
+
+<option value="17">1</option>
+
+<option value="19">zx</option>
+
+<option value="21">111</option>
+
+<option value="22">проверка</option>
+
+<option value="23">!!!СРОЧНО ДЕДЛАЙН!!!</option>
+
+<option value="24">sas</option>
+
+<option value="25">учеба</option>
+
+<option value="26">хобби</option>
+
+<option value="28">my status</option>
+
+<option value="30">fox around</option>
+
+<option value="31">fur</option>
+
+<option value="34">мыыыы</option>
+
+<option value="37">СрочноВажно</option>
+
+<option value="42">moystatus</option>
+
+<option value="45">super</option>
+
+<option value="48">Статус</option>
+
+<option value="49">qqq</option>
+
+<option value="50">Новая статья</option>
+
+<option value="52">qqqq</option>
+
+<option value="53">Cool</option>
+
+</select></div></div>
+  <div class="form-group"><label for="id_executor">Исполнитель</label><div class="mr-3 ml-2"><select name="executor" class="form-control" title="" id="id_executor">
+<option value="" selected="">---------</option>
+
+<option value="1">1234 123111</option>
+
+<option value="2">Firstname Lastname</option>
+
+<option value="3">ANDRE FEO</option>
+
+<option value="6">Odhako Default</option>
+
+<option value="7">dsadsa dsadas</option>
+
+<option value="8">фыва фыва</option>
+
+<option value="9">Айрис Рейн</option>
+
+<option value="11">admin admin</option>
+
+<option value="12">Tosterq Пелевин</option>
+
+<option value="14">asdasd asdasd</option>
+
+<option value="15">Chudilo44 Артём</option>
+
+<option value="16">test1 Артём</option>
+
+<option value="17">test test</option>
+
+<option value="18">v g12</option>
+
+<option value="19">ppppp pppp</option>
+
+<option value="20">test4 test4</option>
+
+<option value="21">asdsad dsadsa</option>
+
+<option value="22">asdqwrewr asdfgdreq</option>
+
+<option value="23">Игорь Гахов</option>
+
+<option value="24">VASYA KOLYA</option>
+
+<option value="25">sfsdf sdfsdf</option>
+
+<option value="26">UserN UserL</option>
+
+<option value="27">Esmirald Tigrillov</option>
+
+<option value="28">1 2</option>
+
+<option value="29">ffff fffff</option>
+
+<option value="30">vadvi sfsd</option>
+
+<option value="31">hex let</option>
+
+<option value="32">123 123</option>
+
+<option value="33">123 456</option>
+
+<option value="34">poi lkj</option>
+
+<option value="35">iris raine</option>
+
+<option value="38">imya familia</option>
+
+<option value="42">Red Fox</option>
+
+<option value="43">fox fox</option>
+
+<option value="44">Лисица Рыжая</option>
+
+<option value="45">tv tropes</option>
+
+<option value="46">First Name Last Name</option>
+
+<option value="47">Вас Авф</option>
+
+<option value="48">Очень длинное пользовательское имя для проверки формы фильтрации</option>
+
+<option value="49">SCS Software</option>
+
+<option value="50">Mark aaф</option>
+
+<option value="51">беня гофман</option>
+
+<option value="52">New User</option>
+
+<option value="55">Delete Test</option>
+
+<option value="56">Павел Николаевский</option>
+
+<option value="57">abc123 abc123</option>
+
+<option value="58">алексей субач</option>
+
+<option value="59">Какое то им Какая то фамилия</option>
+
+<option value="60">Анатолий Высоколян</option>
+
+<option value="62">First_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) Last_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</option>
+
+<option value="64">first_name last_name</option>
+
+<option value="65">123 145</option>
+
+<option value="66">1234 123111</option>
+
+<option value="67">Check Checker</option>
+
+<option value="68">123 123</option>
+
+<option value="69">fads fda</option>
+
+<option value="70">Al ex</option>
+
+<option value="71">Sailor Sailor</option>
+
+<option value="73">Дмитрий Щербина</option>
+
+<option value="74">test_user test_user</option>
+
+<option value="77">Andresh eo</option>
+
+<option value="78">Сергей Ким</option>
+
+<option value="79">Sa ga</option>
+
+<option value="80">Matvei Khmyzov</option>
+
+<option value="81">Iaroslav Kasatkin</option>
+
+<option value="82">Frodo Bagins</option>
+
+<option value="83">М Р</option>
+
+<option value="84">nico bellic</option>
+
+<option value="85">a asa</option>
+
+<option value="86">1234 23525</option>
+
+<option value="87">Ва ASdsasas</option>
+
+<option value="88">ii ivan</option>
+
+<option value="90">Дюща Трактаристов</option>
+
+<option value="92">чсфывя ячсфыввф</option>
+
+<option value="93">1 2</option>
+
+<option value="94">a s</option>
+
+<option value="95">ad ddd</option>
+
+<option value="96">Дедушкины сказки (Жесть)</option>
+
+<option value="98">Iaroslavqwerty Kasatkinqwe</option>
+
+<option value="99">aaaa aaaa</option>
+
+<option value="100">Iaroslav Kasatkin</option>
+
+<option value="101">qwe qwe</option>
+
+<option value="102">1122 1</option>
+
+<option value="106">a a</option>
+
+<option value="107">qqq qqq</option>
+
+<option value="108">eee eee</option>
+
+<option value="110">1234 asa</option>
+
+<option value="111">Al ex</option>
+
+<option value="112">q `12</option>
+
+<option value="114">kkb bb</option>
+
+</select></div></div>
+  <div class="form-group"><label for="id_label">Метка</label><div class="mr-3 ml-2"><select name="label" class="form-control" title="" id="id_label">
+<option value="" selected="">---------</option>
+
+<option value="3">3333</option>
+
+<option value="4">odhako1</option>
+
+<option value="6">DEBUG</option>
+
+<option value="8">lkjhjgh</option>
+
+<option value="9">1</option>
+
+<option value="11">qwerty</option>
+
+<option value="13">Complex Numbers1</option>
+
+<option value="15">обучение на хекслете</option>
+
+<option value="18">Метка</option>
+
+</select></div></div>
+  <div class="form-group"><div class="mr-3"><div class="form-check"><input type="checkbox" name="self_tasks" class="form-check-input" id="id_self_tasks"><label class="form-check-label" for="id_self_tasks">Только свои задачи</label></div></div></div>
+  <div class="form-group">
+    <input class="btn btn-primary" type="submit" value="Показать">
+  </div>
+</form>
+</div>
+</div>
+
+
+<table class="table table-striped">
+<thead>
+<tr>
+  <th>ID</th>
+  <th>Имя</th>
+  <th>Статус</th>
+  <th>Автор</th>
+  <th>Исполнитель</th>
+  <th>Дата создания</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+
+  <tr>
+    <td>2</td>
+    <td>
+      <a href="/tasks/2/">У коровы нет других забот</a>
+    </td>
+    <td>234234232</td>
+    <td>Odhako Default</td>
+    <td>Sailor Sailor</td>
+    <td>30.01.2023 06:28</td>
+    <td>
+      <a href="/tasks/2/update/">Изменить</a>
+      <br>
+      <a href="/tasks/2/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>
+      <a href="/tasks/6/">важная задача</a>
+    </td>
+    <td>234234232</td>
+    <td>Tosterq Пелевин</td>
+    <td></td>
+    <td>02.02.2023 10:45</td>
+    <td>
+      <a href="/tasks/6/update/">Изменить</a>
+      <br>
+      <a href="/tasks/6/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>
+      <a href="/tasks/7/">sad</a>
+    </td>
+    <td>234234232</td>
+    <td>dsadsa dsadas</td>
+    <td>1234 123111</td>
+    <td>02.02.2023 21:31</td>
+    <td>
+      <a href="/tasks/7/update/">Изменить</a>
+      <br>
+      <a href="/tasks/7/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>
+      <a href="/tasks/8/">sadsad</a>
+    </td>
+    <td>234234232</td>
+    <td>dsadsa dsadas</td>
+    <td>1234 123111</td>
+    <td>02.02.2023 22:19</td>
+    <td>
+      <a href="/tasks/8/update/">Изменить</a>
+      <br>
+      <a href="/tasks/8/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>11</td>
+    <td>
+      <a href="/tasks/11/">sdgsdh</a>
+    </td>
+    <td>Мутим дела</td>
+    <td>Tosterq Пелевин</td>
+    <td></td>
+    <td>03.02.2023 19:27</td>
+    <td>
+      <a href="/tasks/11/update/">Изменить</a>
+      <br>
+      <a href="/tasks/11/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>12</td>
+    <td>
+      <a href="/tasks/12/">dqwdqw</a>
+    </td>
+    <td>234234232</td>
+    <td>dsadsa dsadas</td>
+    <td></td>
+    <td>04.02.2023 23:47</td>
+    <td>
+      <a href="/tasks/12/update/">Изменить</a>
+      <br>
+      <a href="/tasks/12/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>13</td>
+    <td>
+      <a href="/tasks/13/">Тест</a>
+    </td>
+    <td>234234232</td>
+    <td>test test</td>
+    <td>admin admin</td>
+    <td>06.02.2023 08:01</td>
+    <td>
+      <a href="/tasks/13/update/">Изменить</a>
+      <br>
+      <a href="/tasks/13/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>14</td>
+    <td>
+      <a href="/tasks/14/">DEBUG</a>
+    </td>
+    <td>234234232</td>
+    <td>admin admin</td>
+    <td>admin admin</td>
+    <td>07.02.2023 12:10</td>
+    <td>
+      <a href="/tasks/14/update/">Изменить</a>
+      <br>
+      <a href="/tasks/14/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>15</td>
+    <td>
+      <a href="/tasks/15/">Моя задача</a>
+    </td>
+    <td>Мутим дела</td>
+    <td>asdqwrewr asdfgdreq</td>
+    <td>test4 test4</td>
+    <td>09.02.2023 10:25</td>
+    <td>
+      <a href="/tasks/15/update/">Изменить</a>
+      <br>
+      <a href="/tasks/15/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>16</td>
+    <td>
+      <a href="/tasks/16/">111111x86</a>
+    </td>
+    <td>234234232</td>
+    <td>v g12</td>
+    <td>v g12</td>
+    <td>11.02.2023 00:16</td>
+    <td>
+      <a href="/tasks/16/update/">Изменить</a>
+      <br>
+      <a href="/tasks/16/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>17</td>
+    <td>
+      <a href="/tasks/17/">Очень важная задача</a>
+    </td>
+    <td>jjj</td>
+    <td>Игорь Гахов</td>
+    <td></td>
+    <td>11.02.2023 18:55</td>
+    <td>
+      <a href="/tasks/17/update/">Изменить</a>
+      <br>
+      <a href="/tasks/17/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>18</td>
+    <td>
+      <a href="/tasks/18/">Ййй</a>
+    </td>
+    <td>234234232</td>
+    <td>1234 123111</td>
+    <td>1234 123111</td>
+    <td>13.02.2023 16:59</td>
+    <td>
+      <a href="/tasks/18/update/">Изменить</a>
+      <br>
+      <a href="/tasks/18/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>19</td>
+    <td>
+      <a href="/tasks/19/">fjkfhlcbl</a>
+    </td>
+    <td>Мутим дела</td>
+    <td>Tosterq Пелевин</td>
+    <td>ANDRE FEO</td>
+    <td>13.02.2023 18:35</td>
+    <td>
+      <a href="/tasks/19/update/">Изменить</a>
+      <br>
+      <a href="/tasks/19/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>20</td>
+    <td>
+      <a href="/tasks/20/">DEBUG_4</a>
+    </td>
+    <td>!!!СРОЧНО ДЕДЛАЙН!!!</td>
+    <td>admin admin</td>
+    <td>admin admin</td>
+    <td>15.02.2023 11:20</td>
+    <td>
+      <a href="/tasks/20/update/">Изменить</a>
+      <br>
+      <a href="/tasks/20/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>21</td>
+    <td>
+      <a href="/tasks/21/">sdsdh</a>
+    </td>
+    <td>jjj</td>
+    <td>Tosterq Пелевин</td>
+    <td>1234 123111</td>
+    <td>17.02.2023 15:59</td>
+    <td>
+      <a href="/tasks/21/update/">Изменить</a>
+      <br>
+      <a href="/tasks/21/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>23</td>
+    <td>
+      <a href="/tasks/23/">закончить пятый этап проекта</a>
+    </td>
+    <td>fox around</td>
+    <td>Айрис Рейн</td>
+    <td>Айрис Рейн</td>
+    <td>18.02.2023 11:42</td>
+    <td>
+      <a href="/tasks/23/update/">Изменить</a>
+      <br>
+      <a href="/tasks/23/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>24</td>
+    <td>
+      <a href="/tasks/24/">Проверка</a>
+    </td>
+    <td>проверка</td>
+    <td>Tosterq Пелевин</td>
+    <td></td>
+    <td>18.02.2023 12:34</td>
+    <td>
+      <a href="/tasks/24/update/">Изменить</a>
+      <br>
+      <a href="/tasks/24/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>26</td>
+    <td>
+      <a href="/tasks/26/">ь ь</a>
+    </td>
+    <td>234234232</td>
+    <td>Tosterq Пелевин</td>
+    <td></td>
+    <td>18.02.2023 13:28</td>
+    <td>
+      <a href="/tasks/26/update/">Изменить</a>
+      <br>
+      <a href="/tasks/26/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>27</td>
+    <td>
+      <a href="/tasks/27/">sdfj</a>
+    </td>
+    <td>234234232</td>
+    <td>Tosterq Пелевин</td>
+    <td>First Name Last Name</td>
+    <td>18.02.2023 13:29</td>
+    <td>
+      <a href="/tasks/27/update/">Изменить</a>
+      <br>
+      <a href="/tasks/27/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>28</td>
+    <td>
+      <a href="/tasks/28/">hgfhgf</a>
+    </td>
+    <td>хобби</td>
+    <td>tv tropes</td>
+    <td>tv tropes</td>
+    <td>18.02.2023 18:47</td>
+    <td>
+      <a href="/tasks/28/update/">Изменить</a>
+      <br>
+      <a href="/tasks/28/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>29</td>
+    <td>
+      <a href="/tasks/29/">Большая рабочая задача</a>
+    </td>
+    <td>!!!СРОЧНО ДЕДЛАЙН!!!</td>
+    <td>tv tropes</td>
+    <td></td>
+    <td>18.02.2023 20:10</td>
+    <td>
+      <a href="/tasks/29/update/">Изменить</a>
+      <br>
+      <a href="/tasks/29/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>30</td>
+    <td>
+      <a href="/tasks/30/">ав</a>
+    </td>
+    <td>sas</td>
+    <td>tv tropes</td>
+    <td></td>
+    <td>18.02.2023 20:11</td>
+    <td>
+      <a href="/tasks/30/update/">Изменить</a>
+      <br>
+      <a href="/tasks/30/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>31</td>
+    <td>
+      <a href="/tasks/31/">te</a>
+    </td>
+    <td>esses;;</td>
+    <td>Вас Авф</td>
+    <td>Chudilo44 Артём</td>
+    <td>19.02.2023 17:36</td>
+    <td>
+      <a href="/tasks/31/update/">Изменить</a>
+      <br>
+      <a href="/tasks/31/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>33</td>
+    <td>
+      <a href="/tasks/33/">Обычная задача</a>
+    </td>
+    <td>!!!СРОЧНО ДЕДЛАЙН!!!</td>
+    <td>Очень длинное пользовательское имя для проверки формы фильтрации</td>
+    <td>Лисица Рыжая</td>
+    <td>19.02.2023 21:37</td>
+    <td>
+      <a href="/tasks/33/update/">Изменить</a>
+      <br>
+      <a href="/tasks/33/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>34</td>
+    <td>
+      <a href="/tasks/34/">Первопроходцам</a>
+    </td>
+    <td>хобби</td>
+    <td>Айрис Рейн</td>
+    <td>Айрис Рейн</td>
+    <td>19.02.2023 21:46</td>
+    <td>
+      <a href="/tasks/34/update/">Изменить</a>
+      <br>
+      <a href="/tasks/34/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>35</td>
+    <td>
+      <a href="/tasks/35/">ds</a>
+    </td>
+    <td>fox around</td>
+    <td>SCS Software</td>
+    <td>asdqwrewr asdfgdreq</td>
+    <td>21.02.2023 08:32</td>
+    <td>
+      <a href="/tasks/35/update/">Изменить</a>
+      <br>
+      <a href="/tasks/35/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>36</td>
+    <td>
+      <a href="/tasks/36/">Задача</a>
+    </td>
+    <td>!!!СРОЧНО ДЕДЛАЙН!!!</td>
+    <td>Mark aaф</td>
+    <td>ANDRE FEO</td>
+    <td>25.02.2023 16:39</td>
+    <td>
+      <a href="/tasks/36/update/">Изменить</a>
+      <br>
+      <a href="/tasks/36/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>37</td>
+    <td>
+      <a href="/tasks/37/">Доделать проект Hexlet</a>
+    </td>
+    <td>СрочноВажно</td>
+    <td>First Name Last Name</td>
+    <td>First Name Last Name</td>
+    <td>27.02.2023 20:44</td>
+    <td>
+      <a href="/tasks/37/update/">Изменить</a>
+      <br>
+      <a href="/tasks/37/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>40</td>
+    <td>
+      <a href="/tasks/40/">Ахтунг</a>
+    </td>
+    <td>в работе</td>
+    <td>Sailor Sailor</td>
+    <td></td>
+    <td>04.03.2023 13:33</td>
+    <td>
+      <a href="/tasks/40/update/">Изменить</a>
+      <br>
+      <a href="/tasks/40/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>42</td>
+    <td>
+      <a href="/tasks/42/">Задача без исполнителя</a>
+    </td>
+    <td>СрочноВажно</td>
+    <td>First Name Last Name</td>
+    <td></td>
+    <td>05.03.2023 14:47</td>
+    <td>
+      <a href="/tasks/42/update/">Изменить</a>
+      <br>
+      <a href="/tasks/42/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>45</td>
+    <td>
+      <a href="/tasks/45/">task23</a>
+    </td>
+    <td>в работе</td>
+    <td>Andresh eo</td>
+    <td>ANDRE FEO</td>
+    <td>06.03.2023 16:57</td>
+    <td>
+      <a href="/tasks/45/update/">Изменить</a>
+      <br>
+      <a href="/tasks/45/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>46</td>
+    <td>
+      <a href="/tasks/46/">BBBB</a>
+    </td>
+    <td>jjj</td>
+    <td>Andresh eo</td>
+    <td></td>
+    <td>07.03.2023 15:32</td>
+    <td>
+      <a href="/tasks/46/update/">Изменить</a>
+      <br>
+      <a href="/tasks/46/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>47</td>
+    <td>
+      <a href="/tasks/47/">sdsdsdasda</a>
+    </td>
+    <td>fox around</td>
+    <td>Andresh eo</td>
+    <td>asdsad dsadsa</td>
+    <td>07.03.2023 15:35</td>
+    <td>
+      <a href="/tasks/47/update/">Изменить</a>
+      <br>
+      <a href="/tasks/47/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>48</td>
+    <td>
+      <a href="/tasks/48/">asdqwe</a>
+    </td>
+    <td>проверка</td>
+    <td>Andresh eo</td>
+    <td></td>
+    <td>07.03.2023 21:13</td>
+    <td>
+      <a href="/tasks/48/update/">Изменить</a>
+      <br>
+      <a href="/tasks/48/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>49</td>
+    <td>
+      <a href="/tasks/49/">First</a>
+    </td>
+    <td>jjj</td>
+    <td>Sa ga</td>
+    <td>Sa ga</td>
+    <td>09.03.2023 17:42</td>
+    <td>
+      <a href="/tasks/49/update/">Изменить</a>
+      <br>
+      <a href="/tasks/49/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>50</td>
+    <td>
+      <a href="/tasks/50/">Nicolay</a>
+    </td>
+    <td>СрочноВажно</td>
+    <td>nico bellic</td>
+    <td>Игорь Гахов</td>
+    <td>10.03.2023 15:37</td>
+    <td>
+      <a href="/tasks/50/update/">Изменить</a>
+      <br>
+      <a href="/tasks/50/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>51</td>
+    <td>
+      <a href="/tasks/51/">testED</a>
+    </td>
+    <td>234234232</td>
+    <td>Mark aaф</td>
+    <td></td>
+    <td>11.03.2023 12:49</td>
+    <td>
+      <a href="/tasks/51/update/">Изменить</a>
+      <br>
+      <a href="/tasks/51/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>53</td>
+    <td>
+      <a href="/tasks/53/">qwe</a>
+    </td>
+    <td>my status</td>
+    <td>Andresh eo</td>
+    <td>Дюща Трактаристов</td>
+    <td>12.03.2023 11:12</td>
+    <td>
+      <a href="/tasks/53/update/">Изменить</a>
+      <br>
+      <a href="/tasks/53/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>57</td>
+    <td>
+      <a href="/tasks/57/">qweasdq</a>
+    </td>
+    <td>fox around</td>
+    <td>Дюща Трактаристов</td>
+    <td>asdsad dsadsa</td>
+    <td>12.03.2023 14:33</td>
+    <td>
+      <a href="/tasks/57/update/">Изменить</a>
+      <br>
+      <a href="/tasks/57/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>59</td>
+    <td>
+      <a href="/tasks/59/">уцуцу</a>
+    </td>
+    <td>мыыыы</td>
+    <td>Andresh eo</td>
+    <td></td>
+    <td>12.03.2023 18:15</td>
+    <td>
+      <a href="/tasks/59/update/">Изменить</a>
+      <br>
+      <a href="/tasks/59/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>60</td>
+    <td>
+      <a href="/tasks/60/">Зад</a>
+    </td>
+    <td>Мутим дела</td>
+    <td>Andresh eo</td>
+    <td></td>
+    <td>12.03.2023 18:17</td>
+    <td>
+      <a href="/tasks/60/update/">Изменить</a>
+      <br>
+      <a href="/tasks/60/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>61</td>
+    <td>
+      <a href="/tasks/61/">new</a>
+    </td>
+    <td>234234232</td>
+    <td>Sailor Sailor</td>
+    <td></td>
+    <td>12.03.2023 19:11</td>
+    <td>
+      <a href="/tasks/61/update/">Изменить</a>
+      <br>
+      <a href="/tasks/61/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>62</td>
+    <td>
+      <a href="/tasks/62/">task_1</a>
+    </td>
+    <td>1</td>
+    <td>First_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) Last_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</td>
+    <td>Firstname Lastname</td>
+    <td>14.03.2023 15:11</td>
+    <td>
+      <a href="/tasks/62/update/">Изменить</a>
+      <br>
+      <a href="/tasks/62/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>63</td>
+    <td>
+      <a href="/tasks/63/">task_2</a>
+    </td>
+    <td>234234232</td>
+    <td>First_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) Last_name_user_1))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))</td>
+    <td></td>
+    <td>15.03.2023 15:48</td>
+    <td>
+      <a href="/tasks/63/update/">Изменить</a>
+      <br>
+      <a href="/tasks/63/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>64</td>
+    <td>
+      <a href="/tasks/64/">qwedfg</a>
+    </td>
+    <td>234234232</td>
+    <td>Sailor Sailor</td>
+    <td></td>
+    <td>15.03.2023 21:05</td>
+    <td>
+      <a href="/tasks/64/update/">Изменить</a>
+      <br>
+      <a href="/tasks/64/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>65</td>
+    <td>
+      <a href="/tasks/65/">ghjkl</a>
+    </td>
+    <td>fox around</td>
+    <td>qqq qqq</td>
+    <td>Игорь Гахов</td>
+    <td>16.03.2023 11:36</td>
+    <td>
+      <a href="/tasks/65/update/">Изменить</a>
+      <br>
+      <a href="/tasks/65/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>66</td>
+    <td>
+      <a href="/tasks/66/">a</a>
+    </td>
+    <td>jjj</td>
+    <td>qqq qqq</td>
+    <td></td>
+    <td>16.03.2023 11:46</td>
+    <td>
+      <a href="/tasks/66/update/">Изменить</a>
+      <br>
+      <a href="/tasks/66/delete/">Удалить</a>
+    </td>
+  </tr>
+
+  <tr>
+    <td>67</td>
+    <td>
+      <a href="/tasks/67/">w</a>
+    </td>
+    <td>Мутим дела</td>
+    <td>qqq qqq</td>
+    <td></td>
+    <td>16.03.2023 12:53</td>
+    <td>
+      <a href="/tasks/67/update/">Изменить</a>
+      <br>
+      <a href="/tasks/67/delete/">Удалить</a>
+    </td>
+  </tr>
+
+</tbody>
+</table>
+
+</div>
+{% endblock %}

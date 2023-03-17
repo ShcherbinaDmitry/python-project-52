@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container wrapper flex-grow-1">
+    <h1 class="my-4">
+      Изменение статуса
+    </h1>
+    <form method="post">
+      <input type="hidden" name="csrfmiddlewaretoken" value="mcMjS0xjQuFPDHKBr8O3Ocosvfn48FE6sqh2eCHpLvH1tdFoavugSzFLX1R1GhFM">
+      <div class="form-group">
+        <label for="id_name">Имя</label>
+        <input type="text" name="name" value="234234232" maxlength="100" class="form-control" placeholder="Имя" title="" required="" id="id_name">
+      </div>
+      <div class="form-group">
+        <input class="btn btn-primary" type="submit" value="Изменить">
+      </div>
+    </form>
+  </div>
+{% endblock %}
