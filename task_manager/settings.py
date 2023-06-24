@@ -80,11 +80,11 @@ WSGI_APPLICATION = "task_manager.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
     }
 }
 
-DATABASES["default"] = dj_database_url.config(default=os.getenv("DATABASE_URL"), conn_max_age=600, conn_health_checks=True,)
+DATABASES["default"].update(dj_database_url.config(default=os.getenv("DATABASE_URL"), conn_max_age=600, conn_health_checks=True))
 
 
 # Password validation
