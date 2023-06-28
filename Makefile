@@ -4,3 +4,10 @@ start:
 
 dev:
 		python3 manage.py runserver
+
+activate:
+		source .venv/bin/activate
+
+compilemessages:
+		python manage.py compilemessages
+

@@ -1,57 +1,22 @@
 <!-- hexlet_django_blog/templates/base.html -->
 
 <!DOCTYPE html>
-<html lang="ru-ru">
+<html>
+  {% load i18n %}
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Менеджер задач</title>
-  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" rel="stylesheet">
-  <script crossorigin="anonymous" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script crossorigin="anonymous" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <title>{% trans "Task manager" %}</title>
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery="full" %}
+  {% bootstrap_messages %}
 </head>
 <body class="d-flex flex-column min-vh-100">
-  {% block header %}
-  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
-    <a class="navbar-brand" href="/">Менеджер задач</a>
-    <button type="button" title="Dropdown" class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/users/">Пользователи</a>
-        </li>
-        
-          <li class="nav-item">
-            <a class="nav-link" href="/statuses/">Статусы</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/labels/">Метки</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/tasks/">Задачи</a>
-          </li>
-        
-      </ul>
-      <ul class="navbar-nav">
-          <form action="/logout/" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="ynKA5uw8rxDLEzMRSaBzx6TJgIN2Y5148UyVsizSslYucjlPJfv5tOQSS6ccYOSx">
-            <input class="btn nav-link" type="submit" value="Выход">
-          </form>
-        </ul>
-    </div>
-  </nav>
-  {% endblock %}
+  {% include "components/header.html" %}
   {% block content %}
   {% endblock %}
-  {% block footer %}
-    <footer>
-      <div class="container my-5 pt-4 border-top">
-        <a rel="noopener" target="_blank" href="https://ru.hexlet.io">Hexlet</a>
-      </div>
-    </footer>
-  {% endblock %}
+  {% include "components/footer.html" %}
 </body>
 </html>

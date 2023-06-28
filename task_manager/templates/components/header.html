@@ -1,0 +1,42 @@
+{% block header %}
+  {% load i18n %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <a class="navbar-brand" href="/">{% trans "Task manager" %}</a>
+    <button type="button" title="Dropdown" class="navbar-toggler" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/users/">{% trans "Users" %}</a>
+        </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/statuses/">{% trans "Statuses" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/labels/">{% trans "Labels" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tasks/">{% trans "Tasks" %}</a>
+          </li>
+        
+      </ul>
+      <ul class="navbar-nav">
+        {% if authorized %}
+          <form action="/logout/" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="ynKA5uw8rxDLEzMRSaBzx6TJgIN2Y5148UyVsizSslYucjlPJfv5tOQSS6ccYOSx">
+            <input class="btn nav-link" type="submit" value="Выход">
+          </form>
+        {% else %}
+          <li class="nav-item">
+            <a href="/login" class="nav-link">{% trans "Login" %}</a>
+          </li>
+          <li class="nav-item">
+            <a href="/users/create" class="nav-link">{% trans "Register" %}</a>
+          </li>
+        {% endif %}
+        </ul>
+    </div>
+  </nav>
+{% endblock %}

@@ -71,23 +71,20 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-name = "django-bootstrap-v5"
-version = "1.0.11"
-description = "Bootstrap 5 support for Django projects"
+name = "django-bootstrap4"
+version = "23.1"
+description = "Bootstrap 4 for Django"
 category = "main"
 optional = false
-python-versions = ">=3.6,<4.0"
+python-versions = ">=3.7"
 files = [
-    {file = "django-bootstrap-v5-1.0.11.tar.gz", hash = "sha256:2d431308859ce3cab7729bb09c76039059cd5fbdd34484da82c4c7f8d49da3a2"},
-    {file = "django_bootstrap_v5-1.0.11-py3-none-any.whl", hash = "sha256:a207aa804938164c8450bbbef4faaba6d2093b3236000557a50f3bd44b53d268"},
+    {file = "django-bootstrap4-23.1.tar.gz", hash = "sha256:2c1ad756b44b17093d9b49d8840f5ad8537ec30cb4412834d9bf3c59e0d976ad"},
+    {file = "django_bootstrap4-23.1-py3-none-any.whl", hash = "sha256:e324f40e2dda69725982cf6b5ac6004f29c55ac492aabd880ed57693d3c4c93c"},
 ]
 
 [package.dependencies]
-beautifulsoup4 = ">=4.8.0,<5.0.0"
-django = ">=2.2,<5.0"
-
-[package.extras]
-docs = ["m2r2 (>=0.2.5,<0.3.0)", "sphinx (>=4.4,<5.0)", "sphinx_rtd_theme (>=1.0,<2.0)"]
+beautifulsoup4 = ">=4.8.0"
+Django = ">=3.2"
 
 [[package]]
 name = "gunicorn"
@@ -268,4 +265,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "cc874abef647ff554bf13a5bd046001592eea7f7b1ff52886e0da0e9163e4661"
+content-hash = "37235a7eefc87a0ee65be6fd7bf97bd1dec5428dfe211d7666820ea1833268ec"
