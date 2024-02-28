@@ -212,7 +212,7 @@ msgstr ""
 
 #: task_manager/templates/base.html:11
 msgid "Task manager"
-msgstr "Tatatask manager"
+msgstr "Task manager"
 
 #: task_manager/templates/delete_form.html:9
 msgid "Are you sure you want to delete"
