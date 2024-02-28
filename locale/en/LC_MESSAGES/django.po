@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 16:52+0300\n"
+"POT-Creation-Date: 2024-02-28 17:57+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,13 +38,9 @@ msgstr ""
 #: task_manager/labels/models.py:22 task_manager/tasks/models.py:45
 #: task_manager/templates/labels/index.html:7
 #: task_manager/templates/navbar.html:21
-#: task_manager/templates/tasks/show.html:41 task_manager/tests.py:41
-#: task_manager/tests.py:75
+#: task_manager/templates/tasks/show.html:41 task_manager/tests/tests.py:41
+#: task_manager/tests/tests.py:75
 msgid "Labels"
-msgstr ""
-
-#: task_manager/labels/tests.py:59 task_manager/labels/views.py:51
-msgid "Cannot delete a label because it is in use"
 msgstr ""
 
 #: task_manager/labels/views.py:24
@@ -77,6 +73,10 @@ msgstr ""
 msgid "Label is successfully deleted"
 msgstr ""
 
+#: task_manager/labels/views.py:51 task_manager/tests/test_labels.py:58
+msgid "Cannot delete a label because it is in use"
+msgstr ""
+
 #: task_manager/labels/views.py:54
 msgid "Delete label"
 msgstr ""
@@ -101,13 +101,9 @@ msgid "Status"
 msgstr ""
 
 #: task_manager/statuses/models.py:22 task_manager/templates/navbar.html:18
-#: task_manager/templates/statuses/index.html:7 task_manager/tests.py:37
-#: task_manager/tests.py:71
+#: task_manager/templates/statuses/index.html:7 task_manager/tests/tests.py:37
+#: task_manager/tests/tests.py:71
 msgid "Statuses"
-msgstr ""
-
-#: task_manager/statuses/tests.py:59 task_manager/statuses/views.py:49
-msgid "Cannot delete a status because it is in use"
 msgstr ""
 
 #: task_manager/statuses/views.py:25
@@ -131,6 +127,10 @@ msgstr ""
 msgid "Status successfully deleted"
 msgstr ""
 
+#: task_manager/statuses/views.py:49 task_manager/tests/test_statuses.py:58
+msgid "Cannot delete a status because it is in use"
+msgstr ""
+
 #: task_manager/statuses/views.py:52
 msgid "Delete status"
 msgstr ""
@@ -139,7 +139,7 @@ msgstr ""
 msgid "Show own tasks"
 msgstr ""
 
-#: task_manager/tasks/mixins.py:9 task_manager/tasks/tests.py:94
+#: task_manager/tasks/mixins.py:9 task_manager/tests/tasks_tests.py:94
 msgid "A task can only be deleted by its creator"
 msgstr ""
 
@@ -165,8 +165,8 @@ msgid "Task"
 msgstr ""
 
 #: task_manager/tasks/models.py:58 task_manager/templates/navbar.html:24
-#: task_manager/templates/tasks/index.html:9 task_manager/tests.py:45
-#: task_manager/tests.py:79
+#: task_manager/templates/tasks/index.html:9 task_manager/tests/tests.py:45
+#: task_manager/tests/tests.py:79
 msgid "Tasks"
 msgstr ""
 
@@ -222,8 +222,8 @@ msgstr ""
 msgid "Hexlet"
 msgstr ""
 
-#: task_manager/templates/index.html:8 task_manager/tests.py:21
-#: task_manager/tests.py:59
+#: task_manager/templates/index.html:8 task_manager/tests/tests.py:21
+#: task_manager/tests/tests.py:59
 msgid "Hello from Hexlet!"
 msgstr ""
 
@@ -255,21 +255,20 @@ msgid "Task manger"
 msgstr ""
 
 #: task_manager/templates/navbar.html:13
-#: task_manager/templates/users/index.html:7 task_manager/tests.py:33
-#: task_manager/tests.py:67 task_manager/users/models.py:12
+#: task_manager/templates/users/index.html:7 task_manager/tests/tests.py:33
+#: task_manager/tests/tests.py:67 task_manager/users/models.py:12
 msgid "Users"
 msgstr ""
 
-#: task_manager/templates/navbar.html:37 task_manager/tests.py:63
+#: task_manager/templates/navbar.html:37 task_manager/tests/tests.py:63
 msgid "Logout"
 msgstr ""
 
-#: task_manager/templates/navbar.html:42 task_manager/tests.py:25
-#: task_manager/views.py:25 task_manager/views.py:26
-msgid "Login"
-msgstr ""
+#: task_manager/templates/navbar.html:42
+msgid "Log in"
+msgstr "Login"
 
-#: task_manager/templates/navbar.html:45 task_manager/tests.py:29
+#: task_manager/templates/navbar.html:45 task_manager/tests/tests.py:29
 #: task_manager/users/views.py:32
 msgid "Sign up"
 msgstr ""
@@ -289,6 +288,11 @@ msgstr ""
 
 #: task_manager/templates/users/index.html:14
 msgid "Full name"
+msgstr ""
+
+#: task_manager/tests/tests.py:25 task_manager/views.py:25
+#: task_manager/views.py:26
+msgid "Login"
 msgstr ""
 
 #: task_manager/users/forms.py:10 task_manager/users/forms.py:14
