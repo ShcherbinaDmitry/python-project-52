@@ -26,7 +26,7 @@ class TestStatuses(TestCase):
         )
         self.assertContains(
             response,
-            _("Sign up")
+            _("Register user")
         )
         self.assertContains(
             response,
