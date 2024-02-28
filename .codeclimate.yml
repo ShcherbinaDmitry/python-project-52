@@ -1,2 +1,2 @@
 exclude_patterns:
-  - "task_manger/tests"
+  - "task_manager/tests"
