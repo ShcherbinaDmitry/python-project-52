@@ -1,2 +1,2 @@
 exclude_patterns:
-  - "tests.py"
+  - "task_manger/tests"
