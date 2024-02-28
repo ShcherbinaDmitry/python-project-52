@@ -68,7 +68,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "rollbar.contrib.django.middleware.RollbarNotifierMiddleware",
 ]
 
 ROOT_URLCONF = "task_manager.urls"
@@ -237,13 +236,3 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
 }
-
-ROLLBAR_TOKEN = os.getenv("ROLLBAR_TOKEN")
-
-if ROLLBAR_TOKEN:
-    ROLLBAR = {
-        'access_token': ROLLBAR_TOKEN,
-        'environment': 'development' if DEBUG else 'production',
-        'code_version': '1.0',
-        'root': BASE_DIR,
-    }
