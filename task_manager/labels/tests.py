@@ -17,7 +17,7 @@ class TestLabels(TestCase):
         self.client = Client()
         self.client.force_login(User.objects.first())
 
-    def test_labes_crud(self):
+    def test_labels_crud(self):
         response = self.client.get(reverse("labels"))
         self.assertNotContains(response, "New label 1")
 
