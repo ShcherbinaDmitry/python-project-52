@@ -1,5 +1,4 @@
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 # Create your views here.
@@ -19,23 +18,23 @@ from .mixins import PermitDeleteTaskMixin
 
 
 class TasksListView(CustomLoginMixin, FilterView):
-    template_name = 'tasks/index.html'
+    template_name = "tasks/index.html"
     model = Task
-    context_object_name = 'tasks'
+    context_object_name = "tasks"
     filterset_class = TaskFilter
     extra_context = {
-        'button_text': _('Show'),
+        "button_text": _("Show"),
     }
 
 
 class TaskCreateView(CustomLoginMixin, CustomCreateView):
     model = Task
     form_class = TaskForm
-    success_url = reverse_lazy('tasks')
-    success_message = _('Task is successfully created')
+    success_url = reverse_lazy("tasks")
+    success_message = _("Task is successfully created")
     extra_context = {
-        'header': _('Create task'),
-        'button_text': _('Create'),
+        "header": _("Create task"),
+        "button_text": _("Create"),
     }
 
     def form_valid(self, form):
@@ -44,18 +43,18 @@ class TaskCreateView(CustomLoginMixin, CustomCreateView):
 
 
 class DetailTaskView(CustomLoginMixin, SuccessMessageMixin, DetailView):
-    template_name = 'tasks/show.html'
+    template_name = "tasks/show.html"
     model = Task
 
 
 class TaskUpdateView(CustomLoginMixin, CustomUpdateView):
     model = Task
     form_class = TaskForm
-    success_url = reverse_lazy('tasks')
-    success_message = _('Task is successfully updated')
+    success_url = reverse_lazy("tasks")
+    success_message = _("Task is successfully updated")
     extra_context = {
-        'header': _('Task update'),
-        'button_text': _('Update'),
+        "header": _("Task update"),
+        "button_text": _("Update"),
     }
 
 
@@ -63,9 +62,9 @@ class TaskDeleteView(
         CustomLoginMixin, PermitDeleteTaskMixin,
         CustomDeleteView):
     model = Task
-    success_url = reverse_lazy('tasks')
-    success_message = _('Task successfully deleted')
+    success_url = reverse_lazy("tasks")
+    success_message = _("Task successfully deleted")
     extra_context = {
-        'header': _('Delete task'),
-        'button_text': _('Yes, delete'),
+        "header": _("Delete task"),
+        "button_text": _("Yes, delete"),
     }

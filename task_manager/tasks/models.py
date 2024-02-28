@@ -40,7 +40,7 @@ class Task(models.Model):
     )
     labels = models.ManyToManyField(
         Label,
-        through='TasksRelationLabels',
+        through="TasksRelationLabels",
         blank=True,
         verbose_name=_("Labels"),
         related_name="labels",

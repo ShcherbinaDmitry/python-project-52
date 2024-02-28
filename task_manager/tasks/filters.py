@@ -8,13 +8,13 @@ from .models import Task
 
 class TaskFilter(df.FilterSet):
     own_tasks = df.BooleanFilter(
-        method='show_own_task',
+        method="show_own_task",
         widget=forms.CheckboxInput,
-        label=_('Show own tasks'),
+        label=_("Show own tasks"),
     )
     labels = df.ModelChoiceFilter(
         queryset=Label.objects.all(),
-        label=_('Label')
+        label=_("Label")
     )
 
     def show_own_task(self, queryset, arg, value):
@@ -23,4 +23,4 @@ class TaskFilter(df.FilterSet):
 
     class Meta:
         model = Task
-        fields = ['status', 'executor', 'labels']
+        fields = ["status", "executor", "labels"]
