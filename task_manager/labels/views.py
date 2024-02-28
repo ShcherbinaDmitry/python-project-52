@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 # Create your views here.
@@ -14,30 +13,30 @@ from task_manager.views import (
 
 
 class LabelsListView(CustomLoginMixin, ListView):
-    template_name = 'labels/index.html'
+    template_name = "labels/index.html"
     model = Label
-    context_object_name = 'labels'
+    context_object_name = "labels"
 
 
 class LabelCreateView(CustomLoginMixin, CustomCreateView):
     model = Label
     form_class = LabelForm
     success_message = _("Label is successfully created")
-    success_url = reverse_lazy('labels')
+    success_url = reverse_lazy("labels")
     extra_context = {
-        'header': _('Create label'),
-        'button_text': _('Create'),
+        "header": _("Create label"),
+        "button_text": _("Create"),
     }
 
 
 class LabelUpdateView(CustomLoginMixin, CustomUpdateView):
     model = Label
     form_class = LabelForm
-    success_url = reverse_lazy('labels')
+    success_url = reverse_lazy("labels")
     success_message = _("Label is successfully updated")
     extra_context = {
-        'header': _("Label update"),
-        'button_text': _("Update")
+        "header": _("Label update"),
+        "button_text": _("Update")
     }
 
 
@@ -45,10 +44,10 @@ class LabelDeleteView(
         DeleteProtectionMixin, CustomDeleteView):
     model = Label
     success_message = _("Label is successfully deleted")
-    success_url = reverse_lazy('labels')
+    success_url = reverse_lazy("labels")
     protected_message = _("Cannot delete a label because it is in use")
-    protected_url = reverse_lazy('labels')
+    protected_url = reverse_lazy("labels")
     extra_context = {
-        'header': _("Delete label"),
-        'button_text': _("Yes, delete")
+        "header": _("Delete label"),
+        "button_text": _("Yes, delete")
     }
