@@ -12,15 +12,14 @@ lint:
 		task_manager
 
 test:
-		poetry run python3 manage.py test
+		poetry run python3 manage.py test ./task_manager/tests
 
 test-coverage:
-		poetry run coverage run --source='.' manage.py test
+		poetry run coverage run --source='.' manage.py test ./task_manager/tests
 		poetry run coverage xml
 
-PORT ?= 8000
 dev:
 		${MANAGE} runserver
 
 start:
-		poetry run gunicorn -w 5 -b 0.0.0.0:${PORT} task_manager.wsgi
+		poetry run gunicorn task_manager.wsgi
