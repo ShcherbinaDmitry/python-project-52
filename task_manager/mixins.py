@@ -7,11 +7,11 @@ from django.utils.translation import gettext_lazy as _
 
 
 class CustomLoginMixin(LoginRequiredMixin):
-    login_url = 'login'
+    login_url = "login"
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            message = _("You are not logged in! Please log in.")
+            message = _("You are not authorized! Please log in.")
             messages.error(request, message)
             return redirect(self.login_url)
 
@@ -25,7 +25,7 @@ class PermitModifyUserMixin(UserPassesTestMixin):
     def handle_no_permission(self):
         message = _("You don't have permissions to modify another user.")
         messages.error(self.request, message)
-        return redirect(reverse_lazy('users'))
+        return redirect(reverse_lazy("users"))
 
 
 class DeleteProtectionMixin:
@@ -43,5 +43,5 @@ class DeleteProtectionMixin:
 class ObjectContextMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['object'] = self.get_object()
+        context["object"] = self.get_object()
         return context
