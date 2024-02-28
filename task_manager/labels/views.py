@@ -41,7 +41,10 @@ class LabelUpdateView(CustomLoginMixin, CustomUpdateView):
 
 
 class LabelDeleteView(
-        DeleteProtectionMixin, CustomDeleteView):
+        CustomLoginMixin,
+        DeleteProtectionMixin,
+        CustomDeleteView
+    ):
     model = Label
     success_message = _("Label is successfully deleted")
     success_url = reverse_lazy("labels")
