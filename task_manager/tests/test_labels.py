@@ -5,7 +5,6 @@ from task_manager.users.models import User
 
 
 class TestLabels(TestCase):
-
     fixtures = [
         "statuses.json",
         "labels.json",
