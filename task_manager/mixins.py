@@ -11,7 +11,7 @@ class CustomLoginMixin(LoginRequiredMixin):
 
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated:
-            message = _("You are not authorized! Please log in.")
+            message = _("You are not authorized! Please log in")
             messages.error(request, message)
             return redirect(self.login_url)
 
@@ -23,7 +23,7 @@ class PermitModifyUserMixin(UserPassesTestMixin):
         return self.get_object().id == self.request.user.id
 
     def handle_no_permission(self):
-        message = _("You don't have permissions to modify another user.")
+        message = _("You don't have permissions to modify another user")
         messages.error(self.request, message)
         return redirect(reverse_lazy("users"))
 

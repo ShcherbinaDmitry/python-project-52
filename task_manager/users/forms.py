@@ -14,7 +14,7 @@ class RegisterUserForm(UserCreationForm):
                 "placeholder": _("Password")
             }
         ),
-        help_text=_("Your password must be at least 3 characters long."),
+        help_text=_("Your password must be at least 3 characters long"),
     )
     password2 = forms.CharField(
         label=_("Password confirmation"),
@@ -24,7 +24,7 @@ class RegisterUserForm(UserCreationForm):
                 "placeholder": _("Password confirmation")
             }
         ),
-        help_text=_("To confirm, please enter your password again."),
+        help_text=_("To confirm, please enter your password again"),
     )
 
     class Meta:
@@ -49,7 +49,7 @@ class UpdateUserForm(UserChangeForm):
                 "placeholder": _("Password")
             }
         ),
-        help_text=_("Your password must be at least 3 characters long."),
+        help_text=_("Your password must be at least 3 characters long"),
     )
     password2 = forms.CharField(
         label=_("Password confirmation"),
@@ -59,7 +59,7 @@ class UpdateUserForm(UserChangeForm):
                 "placeholder": _("Password confirmation")
             }
         ),
-        help_text=_("To confirm, please enter your password again."),
+        help_text=_("To confirm, please enter your password again"),
     )
 
     class Meta(UserChangeForm.Meta):
