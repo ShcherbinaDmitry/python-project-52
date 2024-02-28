@@ -7,47 +7,69 @@ from .models import User
 
 class RegisterUserForm(UserCreationForm):
     password1 = forms.CharField(
-        label=_('Password'),
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": _("Password")}),
-        help_text=_('Your password must be at least 3 characters long.'),
+        label=_("Password"),
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": _("Password")
+            }
+        ),
+        help_text=_("Your password must be at least 3 characters long."),
     )
     password2 = forms.CharField(
-        label=_('Password confirmation'),
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": _("Password confirmation")}),
-        help_text=_('To confirm, please enter your password again.'),
+        label=_("Password confirmation"),
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": _("Password confirmation")
+            }
+        ),
+        help_text=_("To confirm, please enter your password again."),
     )
+
     class Meta:
         model = User
         fields = (
-            'first_name',
-            'last_name',
-            'username',
-            'password1',
-            'password2',
+            "first_name",
+            "last_name",
+            "username",
+            "password1",
+            "password2",
         )
+
 
 class UpdateUserForm(UserChangeForm):
     password = None
 
     password1 = forms.CharField(
-        label=_('Password'),
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": _("Password")}),
-        help_text=_('Your password must be at least 3 characters long.'),
+        label=_("Password"),
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": _("Password")
+            }
+        ),
+        help_text=_("Your password must be at least 3 characters long."),
     )
     password2 = forms.CharField(
-        label=_('Password confirmation'),
-        widget=forms.PasswordInput(attrs={"class": "form-control", "placeholder": _("Password confirmation")}),
-        help_text=_('To confirm, please enter your password again.'),
+        label=_("Password confirmation"),
+        widget=forms.PasswordInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": _("Password confirmation")
+            }
+        ),
+        help_text=_("To confirm, please enter your password again."),
     )
 
     class Meta(UserChangeForm.Meta):
         model = User
         fields = (
-            'first_name',
-            'last_name',
-            'username',
-            'password1',
-            'password2',
+            "first_name",
+            "last_name",
+            "username",
+            "password1",
+            "password2",
         )
 
     # method from BaseUserCreationForm
