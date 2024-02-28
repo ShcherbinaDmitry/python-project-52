@@ -36,7 +36,7 @@
             <td>{{ task.id }}</td>
             <td><a href="{% url 'task_show' task.id %}">{{ task.name }}</a></td>
             <td>{{ task.status }}</td>
-            <td>{{ task.author }}</td>
+            <td>{{ task.creator }}</td>
 
             {% if task.executor %}
             <td>{{ task.executor }}</td>
