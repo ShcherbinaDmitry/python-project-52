@@ -11,17 +11,19 @@ from task_manager.views import (
 
 from .forms import StatusForm
 
-
-class StatusesListView(CustomLoginMixin, ListView):
-    template_name = "statuses/index.html"
+class BasicStatusView(CustomLoginMixin):
     model = Status
+    success_url = reverse_lazy("statuses")
+
+
+
+class StatusesListView(BasicStatusView, ListView):
+    template_name = "statuses/index.html"
     context_object_name = "statuses"
 
 
-class StatusCreateView(CustomLoginMixin, CustomCreateView):
-    model = Status
+class StatusCreateView(BasicStatusView, CustomCreateView):
     form_class = StatusForm
-    success_url = reverse_lazy("statuses")
     success_message = _("Status successfully created")
     extra_context = {
         "header": _("Create status"),
@@ -29,10 +31,8 @@ class StatusCreateView(CustomLoginMixin, CustomCreateView):
     }
 
 
-class StatusUpdateView(CustomLoginMixin, CustomUpdateView):
-    model = Status
+class StatusUpdateView(BasicStatusView, CustomUpdateView):
     form_class = StatusForm
-    success_url = reverse_lazy("statuses")
     success_message = _("Status is successfully updated")
     extra_context = {
         "header": _("Update user"),
@@ -41,10 +41,8 @@ class StatusUpdateView(CustomLoginMixin, CustomUpdateView):
 
 
 class StatusDeleteView(
-        CustomLoginMixin, DeleteProtectionMixin,
+        BasicStatusView, DeleteProtectionMixin,
         CustomDeleteView):
-    model = Status
-    success_url = reverse_lazy("statuses")
     success_message = _("Status successfully deleted")
     protected_message = _("Cannot delete a status because it is in use")
     protected_url = reverse_lazy("statuses")

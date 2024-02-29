@@ -4,26 +4,23 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import User
 
-
-class RegisterUserForm(UserCreationForm):
-    password1 = forms.CharField(
-        label=_("Password"),
-        widget=forms.PasswordInput(
+def get_widget(placeholder):
+    return forms.PasswordInput(
             attrs={
                 "class": "form-control",
-                "placeholder": _("Password")
+                "placeholder": _(placeholder)
             }
-        ),
+        )
+
+class BasicUserForm(UserCreationForm):
+    password1 = forms.CharField(
+        label=_("Password"),
+        widget=get_widget("Password"),
         help_text=_("Your password must be at least 3 characters long"),
     )
     password2 = forms.CharField(
         label=_("Password confirmation"),
-        widget=forms.PasswordInput(
-            attrs={
-                "class": "form-control",
-                "placeholder": _("Password confirmation")
-            }
-        ),
+        widget=get_widget("Password confirmation"),
         help_text=_("To confirm, please enter your password again"),
     )
 
@@ -37,42 +34,13 @@ class RegisterUserForm(UserCreationForm):
             "password2",
         )
 
+class RegisterUserForm(BasicUserForm):
+    pass
 
-class UpdateUserForm(UserChangeForm):
+
+class UpdateUserForm(BasicUserForm):
     password = None
 
-    password1 = forms.CharField(
-        label=_("Password"),
-        widget=forms.PasswordInput(
-            attrs={
-                "class": "form-control",
-                "placeholder": _("Password")
-            }
-        ),
-        help_text=_("Your password must be at least 3 characters long"),
-    )
-    password2 = forms.CharField(
-        label=_("Password confirmation"),
-        widget=forms.PasswordInput(
-            attrs={
-                "class": "form-control",
-                "placeholder": _("Password confirmation")
-            }
-        ),
-        help_text=_("To confirm, please enter your password again"),
-    )
-
-    class Meta(UserChangeForm.Meta):
-        model = User
-        fields = (
-            "first_name",
-            "last_name",
-            "username",
-            "password1",
-            "password2",
-        )
-
-    # method from BaseUserCreationForm
     def clean_password2(self):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
