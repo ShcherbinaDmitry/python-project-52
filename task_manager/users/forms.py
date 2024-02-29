@@ -4,15 +4,17 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import User
 
+
 def get_widget(placeholder):
     return forms.PasswordInput(
-            attrs={
-                "class": "form-control",
-                "placeholder": _(placeholder)
-            }
-        )
+        attrs={
+            "class": "form-control",
+            "placeholder": _(placeholder)
+        }
+    )
 
-class BasicUserForm(UserCreationForm):
+
+class BasicUserForm:
     password1 = forms.CharField(
         label=_("Password"),
         widget=get_widget("Password"),
@@ -34,11 +36,12 @@ class BasicUserForm(UserCreationForm):
             "password2",
         )
 
-class RegisterUserForm(BasicUserForm):
+
+class RegisterUserForm(UserCreationForm, BasicUserForm):
     pass
 
 
-class UpdateUserForm(BasicUserForm):
+class UpdateUserForm(UserChangeForm, BasicUserForm):
     password = None
 
     def clean_password2(self):

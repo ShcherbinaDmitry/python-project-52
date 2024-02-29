@@ -11,10 +11,10 @@ from task_manager.views import (
 
 from .forms import StatusForm
 
+
 class BasicStatusView(CustomLoginMixin):
     model = Status
     success_url = reverse_lazy("statuses")
-
 
 
 class StatusesListView(BasicStatusView, ListView):
